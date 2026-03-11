@@ -38,7 +38,11 @@ echo "📝 安裝全域 CLAUDE.md..."
 cp "$SCRIPT_DIR/CLAUDE.md" ~/.claude/CLAUDE.md
 
 echo "📝 安裝 Skills..."
-cp "$SCRIPT_DIR/skills/"*.md ~/.claude/skills/
+for skill_dir in "$SCRIPT_DIR/skills"/*/; do
+    skill_name=$(basename "$skill_dir")
+    mkdir -p ~/.claude/skills/"$skill_name"
+    cp -r "$skill_dir"* ~/.claude/skills/"$skill_name"/
+done
 
 echo "📝 安裝 Rules..."
 cp "$SCRIPT_DIR/rules/"*.md ~/.claude/rules/
@@ -49,10 +53,10 @@ echo ""
 echo "~/.claude/"
 echo "├── CLAUDE.md                  # 全域上下文（每次會話自動讀取）"
 echo "├── skills/"
-echo "│   ├── spec.md               # /spec — Spec 三階段開發流程"
-echo "│   ├── review.md             # /review — 代碼審查工作流"
-echo "│   ├── steering-init.md      # /steering-init — 初始化專案 Steering"
-echo "│   └── steering-update.md    # /steering-update — 功能完成後更新 Steering"
+echo "│   ├── spec/SKILL.md         # /spec — Spec 三階段開發流程"
+echo "│   ├── review/SKILL.md       # /review — 代碼審查工作流"
+echo "│   ├── steering-init/SKILL.md  # /steering-init — 初始化專案 Steering"
+echo "│   └── steering-update/SKILL.md  # /steering-update — 功能完成後更新 Steering"
 echo "└── rules/"
 echo "    ├── typescript.md          # *.ts/*.tsx 文件規則"
 echo "    └── git.md                 # Git 相關規則"
