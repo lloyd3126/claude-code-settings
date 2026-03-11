@@ -1,4 +1,4 @@
-# claude-code-steering
+# claude-code-settings
 
 **把 Kiro 的 Steering + Spec 精神帶到 Claude Code — 全域 Skills 工具包**
 
@@ -39,8 +39,8 @@
 ### 1. 一鍵安裝
 
 ```bash
-git clone https://github.com/lloyd3126/claude-code-steering.git
-cd claude-code-steering
+git clone https://github.com/lloyd3126/claude-code-settings.git
+cd claude-code-settings
 chmod +x setup.sh
 ./setup.sh
 ```
