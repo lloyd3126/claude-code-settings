@@ -1,6 +1,6 @@
 ---
+name: steering-init
 description: 為當前專案初始化 Steering 文件。當用戶說「初始化 steering」「建立專案文檔」「設置專案上下文」時使用。
-disable-model-invocation: true
 ---
 
 # 初始化專案 Steering 文件

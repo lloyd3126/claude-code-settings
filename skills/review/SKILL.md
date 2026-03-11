@@ -1,4 +1,5 @@
 ---
+name: review
 description: 代碼審查工作流。當用戶說「review」「審查代碼」「檢查代碼」「PR review」時使用。
 ---
 

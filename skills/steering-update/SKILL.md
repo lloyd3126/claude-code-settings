@@ -1,4 +1,5 @@
 ---
+name: steering-update
 description: 功能完成後更新 Steering 文件。當用戶說「更新 steering」「同步文檔」「功能做完了」「更新進度」或完成了 Spec 任務清單的所有任務時使用。
 ---
 
